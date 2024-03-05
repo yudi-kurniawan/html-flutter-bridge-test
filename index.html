@@ -13,7 +13,7 @@
       
   <div class="input-group mb-3">
     <input id="input-message" type="text" class="form-control" placeholder="Pesan" >
-    <button onclick="getInputMessage" class="btn btn-outline-secondary" type="button" >Button</button>
+    <button onclick="getInputMessage()" class="btn btn-outline-secondary" type="button" >Button</button>
   </div>
     </div>
     
@@ -21,6 +21,7 @@
   
     <script type="text/javascript">
             function getInputMessage(){
+              console.log('yyyy');
               var message = document.getElementById('input-message').value;
               console.log(message);
               sendBack(message);
