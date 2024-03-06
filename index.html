@@ -11,22 +11,20 @@
 
       <h1>Web Flutter Brigde</h1>
       
-  <div class="input-group mb-3">
-    <input id="input-message" type="text" class="form-control" placeholder="Pesan" >
-    <button onclick="getInputMessage()" class="btn btn-outline-secondary" type="button" >Button</button>
-  </div>
+      <button onclick="sendCommand('print_receipt')" type="button" class="btn btn-outline-primary">Print</button>
+      <button onclick="sendCommand('open_settings')" type="button" class="btn btn-outline-primary">Settings</button>
+      <button onclick="sendCommand('reload_page')" type="button" class="btn btn-outline-primary">Reload</button>
+      <button onclick="sendCommand('show_snackbar')" type="button" class="btn btn-outline-primary">Snackbar</button>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   
     <script type="text/javascript">
-            function getInputMessage(){
-              // console.log('yyyy');
-              // var message = document.getElementById('input-message').value;
-              // console.log(message);
+            function sendCommand(command){
+              // console.log('Web : '+command);
 
               let data = {
-                'command': 'open_settings',
+                'command': command,
                 'message':'haloo dari web',
                   'data':{}
               };
