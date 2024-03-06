@@ -21,10 +21,17 @@
   
     <script type="text/javascript">
             function getInputMessage(){
-              console.log('yyyy');
-              var message = document.getElementById('input-message').value;
-              console.log(message);
-              sendBack(message);
+              // console.log('yyyy');
+              // var message = document.getElementById('input-message').value;
+              // console.log(message);
+
+              let data = {
+                'command': 'open_settings',
+                  'data':{
+                      'message':'haloo dari web'
+                  }
+              };
+              sendBack(JSON.stringify(data));
             }
       
             function fromFlutter(newTitle) {
@@ -32,8 +39,8 @@
                 sendBack();
              }
 
-             function sendBack(message) {
-                Toaster.postMessage(message);
+             function sendBack(data) {
+                Toaster.postMessage(data);
              }
         </script>
   </body>
