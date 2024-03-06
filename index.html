@@ -31,7 +31,10 @@
                       'message':'haloo dari web'
                   }
               };
-              sendBack(JSON.stringify(data));
+
+              let stringData = JSON.stringify(data);
+              console.log(stringData);
+              sendBack(stringData);
             }
       
             function fromFlutter(newTitle) {
